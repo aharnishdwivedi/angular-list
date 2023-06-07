@@ -1,7 +1,6 @@
 <h1>API List</h1>
-    <ol>
-      <li *ngFor="let entry of apiList"><h3>{{entry.API}}</h3>
-            <h5>{{entry.Description}}</h5>
-            <p>{{entry.Link}}</p>
-      </li>
-    </ol>
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search API" />
+<button (click)="search()">Search</button>
+<ul>
+  <li *ngFor="let entry of filteredApiList">{{ entry.API }}</li>
+</ul>
